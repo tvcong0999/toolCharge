@@ -16,6 +16,7 @@ export class TransportRequestComponent implements OnInit {
   next(){
     if(this.checkFormData(this.tranService.formData))
     {
+      this.tranService.isDisabled = true;
     this.router.navigateByUrl('/surcharge');
     }
   }

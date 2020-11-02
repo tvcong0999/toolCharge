@@ -16,6 +16,7 @@ import { Router, RouterModule } from '@angular/router';
 import {  TransportRequestInforService } from './shared/service/service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ListSurchageService } from './shared/service/list-surchage.service';
+import { WebcamModule } from 'ngx-webcam';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ListSurchageService } from './shared/service/list-surchage.service';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+     WebcamModule
 
   ],
   providers: [TransportRequestInforService, ListSurchageService],

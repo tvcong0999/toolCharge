@@ -6,6 +6,7 @@ import { ListSurchage } from '../model/model.model';
   providedIn: 'root'
 })
 export class ListSurchageService {
+  public showWebcam: boolean = false;
   listSurchage: ListSurchage[];
   public surcharge:any;
   readonly rootURL = 'http://localhost:51279/api';

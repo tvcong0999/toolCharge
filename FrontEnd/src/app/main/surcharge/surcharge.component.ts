@@ -20,11 +20,13 @@ export class SurchargeComponent implements OnInit {
     this.listSurchageService.getAllListSurchage();
   }
   back(){
+    this.tranService.isDisabled = false;
   }
   chooseSurcharge(){
     console.log(this.tranService.transportRequestInfor);
     this.listSurchageService.surcharge = $('#surcharge').val();
     const navigateToSurchargeDetail: NavigationExtras={};
     this.router.navigate(['/surcharge-detail'], navigateToSurchargeDetail);
+    this.listSurchageService.showWebcam = true;
   }
 }

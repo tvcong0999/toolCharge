@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { cssNumber } from 'jquery';
 import { TransportRequestComponent } from 'src/app/main/transport-request/transport-request.component';
 import { TransportRequestInfor } from '../../model/model.model';
 import { TransportRequestInforService } from '../../service/service.service';
@@ -12,9 +13,13 @@ import { TransportRequestInforService } from '../../service/service.service';
 })
 export class TransportRequestInforComponent implements OnInit {
 
+  isDisabled: boolean;
   constructor( public tranService: TransportRequestInforService) { }
 
   ngOnInit(): void {
+
+      this.isDisabled = false;
+
   }
   loadInforTransportRequest(){
     this.tranService.getInforTransportRequestID(this.tranService.formData.refNo).subscribe((res)=>{

@@ -10,6 +10,7 @@ export class TransportRequestInforService {
   formData: TransportRequestInfor = new TransportRequestInfor();
   readonly rootURL = 'http://localhost:51279/api';
   transportRequestInfor:TransportRequestInfor = new TransportRequestInfor(); 
+  isDisabled: boolean;
 
   constructor(private http: HttpClient) { }
   getInforTransportRequestID(id) {
